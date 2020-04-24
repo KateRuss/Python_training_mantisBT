@@ -3,6 +3,8 @@ from selenium import webdriver
 from fixtura.session import SessionHelper
 from fixtura.project import ProjectHelper
 from fixtura.james import JamesHelper
+from fixtura.mail import MailHelper
+from fixtura.signup import SignupHelper
 
 
 class Application:
@@ -20,6 +22,8 @@ class Application:
         self.session = SessionHelper(self)
         self.project = ProjectHelper(self)
         self.james = JamesHelper(self)
+        self.mail = MailHelper(self)
+        self.signup = SignupHelper(self)
         self.config = config
         self.base_url = config['web']["baseUrl"]
 
